@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+
+    <div class="w3-top"  >
+      <div class="w3-bar">
+        <a href="index.html" class="w3-left w3-button"
+          ><img src="img/logo.png" width="50px"
+        /></a>
+        <a href="#about" class="w3-right w3-button w3-text-sand"
+          >г. Иркутск, ул. 3 Июля, офис 404</a
+        >
+        <a class="w3-right w3-button w3-text-sand" href="tel:++7(3952)22-22-22">
+          +7(3952)22-22-22
+          <a href="tel:+"></a>
+        </a>
+      </div>
+      <div
+        class="w3-bar w3-black w3-opacity w3-hover-opacity-off"
+        id="myNavbar"
+      >
+        <a href="index.html" class="w3-bar-item w3-button">ГЛАВНАЯ</a>
+        <a href="#catalog" class="w3-bar-item w3-button">КАТАЛОГ</a>
+        <a href="#review" class="w3-bar-item w3-button">ОТЗЫВЫ</a>
+        <a href="#contacts" class="w3-bar-item w3-button">КОНТАКТЫ</a>
+      </div>
+    </div>
+
+    <!-- Header with image -->
+    <header
+      class="bgimg w3-display-container w3-grayscale-min"
+      style="background-image: url(img/background.jpg)"
+    >
+      <div class="w3-display-bottommiddle w3-center">
+        <p>
+          <a href="#catalog" class="w3-button w3-xxlarge w3-black"
+            >Наши товары</a
+          >
+        </p>
+      </div>
+    </header>
+    <!-- Slideshow -->
+    <div class="w3-container">
+      <div class="w3-display-container mySlides">
+        <img src="img/item1.jpg" style="width: 100%" />
+        <div class="w3-display-bottommiddle w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-bottom"
+            >Новинки</span
+          >
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="img/item2.jpg" style="width: 100%" />
+        <div class="w3-display-bottommiddle w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-bottom"
+            >Классика</span
+          >
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+        <img src="img/item3.jpg" style="width: 100%" />
+        <div class="w3-display-bottommiddle w3-container w3-padding-32">
+          <span class="w3-white w3-padding-large w3-animate-bottom"
+            >Капсулы</span
+          >
+        </div>
+      </div>
+
+      <!-- Slideshow next/previous buttons -->
+      <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+        <div class="w3-left" onclick="plusDivs(-1)">
+          <i class="fa fa-arrow-circle-left w3-hover-text-teal"></i>
+        </div>
+        <div class="w3-right" onclick="plusDivs(1)">
+          <i class="fa fa-arrow-circle-right w3-hover-text-teal"></i>
+        </div>
+
+        <div class="w3-center">
+          <span
+            class="w3-tag demodots w3-border w3-transparent w3-hover-white"
+            onclick="currentDiv(1)"
+          ></span>
+          <span
+            class="w3-tag demodots w3-border w3-transparent w3-hover-white"
+            onclick="currentDiv(2)"
+          ></span>
+          <span
+            class="w3-tag demodots w3-border w3-transparent w3-hover-white"
+            onclick="currentDiv(3)"
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-padding-16" id="catalog">
+      <div class="w3-third w3-margin-bottom">
+        <img src="img/grain1.jpg" style="width: 100%" />
+        <div class="w3-container w3-white">
+          <h3>Конго Органик</h3>
+          <h6 class="w3-opacity">697 рублей/кг</h6>
+          <div class="column" onclick="openTab('b1');">
+            <button class="w3-button w3-block w3-black w3-margin-bottom ">
+              Подробнее
+            </button>
+          </div>
+          <div id="b1" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            
+            <p>Африканский кофе светлой обжарки, отличающийся плотным и насыщенным вкусом жареного миндаля и спелыми ягодами черемухи, с выразительным ароматом сухофруктов и копченостей.
+
+            </p>
+          </div>
+            <button class="w3-button w3-block w3-black w3-margin-bottom">
+            Добавить в корзину
+          </button>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <img src="img/grain2.jpg" style="width: 100%" />
+        <div class="w3-container w3-white">
+          <h3>Изумрудное кафе</h3>
+          <h6 class="w3-opacity">2970 рублей/кг</h6>
+          <div class="column" onclick="openTab('b2');">
+            <button class="w3-button w3-block w3-black w3-margin-bottom ">
+              Подробнее
+            </button>
+          </div>
+          <div id="b2" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+          <p>Пряный аромат кофе раскрывается оттенками корицы и кардамона, бархатистый сливочно-ореховый вкус напоминает восточные сладости.
+
+          </p>
+        </div>
+
+          <button class="w3-button w3-block w3-black w3-margin-bottom">
+            Добавить в корзину
+          </button>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <img src="img/grain3.jpg" style="width: 100%" />
+        <div class="w3-container w3-white">
+          <h3>Сливочный ликёр</h3>
+          <h6 class="w3-opacity">750 рублей/кг</h6>
+          <div class="column" onclick="openTab('b3');">
+            <button class="w3-button w3-block w3-black w3-margin-bottom ">
+              Подробнее
+            </button>
+          </div>
+          <div id="b3" class="containerTab" style="display:none;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <p>
+            Этот крепкий напиток напоминает кофейно-сливочный коктейль «Айриш»: нежный аромат ириса оттеняется яркой горчинкой темного шоколада и кофе.
+          </p>
+        </div>
+
+          <button class="w3-button w3-block w3-black w3-margin-bottom">
+            Добавить в корзину
+          </button>
+        </div>
+      </div>
+    </div>
+
+  <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" id="review">Отзывы наших клиентов</span>
+    </div>
+    <p class="w3-center"> Дорогие гости, благодарим за отзывы! Ваши отзывы очень ценны для нас. С каждым отзывом мы внимательно работаем, прислушиваемся к мнению абсолютно каждого гостя. Мы всегда рады сотрудничеству и решению любых ситуаций! Во избежание рекламных записей отзывы публикуются после модерации. Контактная почта <a href="mailto:otziv@mysite.ru">otziv@mysite.ru</a>
+    </p>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        
+        <div class="w3-container">
+          <h3>Мария</h3>
+          <p class="w3-opacity">19 Октября 2020 </p>
+          <p>Как всегда, всё на высоте!!! Качество на высоте, а курьер был вежлив и пунктуален, что в наше время очень редко бывает.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        
+        <div class="w3-container">
+          <h3>Светлана</h3>
+          <p class="w3-opacity">04 Октября 2020</p>
+          <p>Получила заказ в подарок. Все красиво упаковано. Доставка своевременно. Курьер отзвонился за час до доставки. Все очень вкусно))) Спасибо вам большое!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        
+        <div class="w3-container">
+          <h3>Алиса</h3>
+          <p class="w3-opacity">13 сентября 2020</p>
+          <p>В этом году заказывала чай и другую продукцию с доставкой уже несколько раз и даже в другом городе. Всегда доставляли в указанное время, все красиво упакованное, что очень приятно. Курьеры позитивные)) Спасибо!
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="w3-center w3-padding-64" id="contact">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Оставить отзыв</span>
+  </div>
+
+  <form class="w3-container" action="/action_page.php" target="_blank">
+    <div class="w3-section">
+      <label>Ваше имя</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
+    </div>
+    <div class="w3-section">
+      <label>Email</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
+    </div>
+    <div class="w3-section">
+      <label>Тема обращения</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
+    </div>
+    <div class="w3-section">
+      <label>Сообщение</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
+    </div>
+    <button type="submit" class="w3-button w3-block w3-black">Отправить</button>
+  </form>
+
+
+
+
+    <!-- Footer -->
+
+    <footer class="w3-container w3-padding-32 w3-light-grey w3-center" id="contacts">
+      <h4 >Контакты</h4>
+      <div>
+        <b>Наш адрес: г. Иркутск, ул. 3 Июля, офис 404</b> <br>
+          <b>Контакт-центр:  <a href="tel:+7(3952)22-22-22">+7(3952)22-22-22</a> </b><br />
+          <b>Электронная почта: <a href="mailto:otziv@mysite.ru">otziv@mysite.ru</a></b>
+        </p>
+        <br />
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A292032cdb2d7ba853edc5b4bdd7a7ede15b2486f1f2ebc17c4602f15eaa05e56&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+        </p>
+      </div>
+
+     
+      <a href="#" class="w3-button w3-black w3-margin"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a
+      >
+      <div class="w3-xlarge w3-section">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </div>
+    
+    </footer>
+
+    <script>
+      // Slideshow
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demodots");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-white";
+      }
+    </script>
+    <script>
+      function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+      </script>
+  </body>
+</html>
